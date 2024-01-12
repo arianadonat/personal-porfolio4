@@ -6,7 +6,7 @@ import logo1 from "../assets/img/logo1.png";
 
 
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState('home');
+    const [setActiveLink] = useState('home');
     const [scrolled, seScrolled ] = useState(false);
     
     useEffect(() => {
@@ -23,9 +23,7 @@ export const NavBar = () => {
       return() => window.removeEventListener("scroll", onScroll)
     }, [])
 
-    const onUpdateActiveLink = (value) => {
-      setActiveLink(value);
-    }
+    
 
     return (
     <Navbar expand="lg" className={scrolled ? "": ""}>
